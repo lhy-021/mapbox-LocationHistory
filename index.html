@@ -9,6 +9,20 @@
     <style>
         body { margin:0; padding:0; }
         #map { position:absolute; top:0; bottom:0; width:100%; }
+        .features{
+          background-color: rgba(255, 255, 255, 0.7);
+          border-radius: 3px;
+          top: 10px;
+          left: 10px;
+          box-shadow: 0 1px 2px rgba(0,0,0,0.10);
+          font: 10px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+          padding: 10px;
+          position: absolute;
+          z-index: 1;
+        }
+        .features h2 {
+            margin: 0 0 5px;
+        }
     </style>
 </head>
 
@@ -17,6 +31,16 @@
 <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.1/mapbox-gl-geocoder.css' type='text/css' />
 
 <div id='map'></div>
+<div class="features">
+  <h2>My Location History</h2>
+  <div>
+    Since the start of using an Andriod phone, Google has been logging <br>
+    my location history 😱. And they were kind enough for me to download <br>
+    the data and make a map of my own trajectory. Can you guess where I <br>
+    lived?<br>
+    Data format is in GeoJSON, mapping API used is Mapbox GL JS.
+  </div>
+</div>
 
 <script>
 // load map
@@ -25,9 +49,9 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibGh5MDIxIiwiYSI6IlJxc2ZxMGcifQ.8f1io4N7S_qsJm
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/lhy021/citv03kap004a2io61hj7yi8y',
-    center: [151.209900, -33.865143],
-    zoom: 10,
-    pitch: 60
+    center: [147.631258, -36.615610],
+    zoom: 6.5,
+    pitch: 50
 });
 
 </script>
